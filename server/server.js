@@ -113,9 +113,7 @@ app.post("/users", (req, res) => {
         });
 }); 
 
-app.get("/users/me", authenticate, (req,res, next) => {
-        next();
-    }, (req, res) => {
+app.get("/users/me", authenticate, (req, res) => {
     res.send(req.user);
 });
 

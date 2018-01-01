@@ -10,7 +10,7 @@ var UserSchema = new mongoose.Schema({
         required: true,
         trim: true,
         minlength: 1,
-        // unique: true
+        unique: true,
         validate: {
             isAsync: false,
             validator: function(v) {
@@ -70,7 +70,6 @@ UserSchema.statics.findByToken = function(token) {
         return new Promise((res, rej) => {
             rej();
         });
-
         // return Promise.reject();
     }
 
