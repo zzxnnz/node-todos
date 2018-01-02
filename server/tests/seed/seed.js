@@ -18,7 +18,7 @@ const users = [
                 token: jwt.sign({
                     _id: user1ID, 
                     access: "auth"
-                }, "abc").toString()
+                }, process.env.JWT_SECRET).toString()
             }
         ]
     }, 
@@ -32,7 +32,7 @@ const users = [
                 token: jwt.sign({
                     _id: user2ID, 
                     access: "auth"
-                }, "abc").toString()
+                }, process.env.JWT_SECRET).toString()
             }
         ]
     }
